@@ -18,7 +18,7 @@ public class SecurityConfig {
     baseSecurityService.configureCoreSecurity(http);
 
     http.authorizeHttpRequests(
-            (req)->req.requestMatchers("/api/v1/client").authenticated()
+            (req)->req.anyRequest().permitAll()
     );
 
     return http.build();
