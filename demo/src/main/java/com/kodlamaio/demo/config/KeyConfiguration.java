@@ -9,7 +9,7 @@ import java.security.*;
 @Configuration
 public class KeyConfiguration {
 
-  private static final String KEY_DIRECTORY = "C:/keys"; // Anahtar dosyalarının saklanacağı dizin
+  private static final String KEY_DIRECTORY = "keys"; // Anahtar dosyalarının saklanacağı dizin
 
   @Bean
   public KeyPair keyPair() throws Exception {

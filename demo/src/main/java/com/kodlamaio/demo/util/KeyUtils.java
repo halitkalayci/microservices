@@ -13,6 +13,11 @@ public class KeyUtils {
   private static final String ALGORITHM = "RSA";
 
   public static void saveKeyPair(String path, KeyPair keyPair) throws IOException {
+    File directory = new File(path);
+    if (!directory.exists()) {
+      directory.mkdirs(); // Create the directory and any necessary but nonexistent parent directories
+    }
+
     File privateKeyFile = new File(path + "/private.key");
     File publicKeyFile = new File(path + "/public.key");
 
